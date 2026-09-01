@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://421310-1w3-gatica-nahuel.github.io/amax-gim/sitemap.xml
