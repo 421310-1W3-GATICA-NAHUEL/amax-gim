@@ -189,6 +189,21 @@
   .about-visual .quote em{ font-style:normal; color:var(--orange); }
   .about-visual .sig{ font-family:var(--font-mono); font-size:.76rem; color:var(--on-dark-soft); letter-spacing:.06em; text-transform:uppercase; }
 
+  .press-card{
+    margin-top:48px; display:flex; align-items:center; gap:22px;
+    background:var(--bg-alt); border:1px solid var(--line); border-radius:var(--radius);
+    padding:26px 30px;
+  }
+  .press-avatar{
+    width:64px; height:64px; border-radius:50%; object-fit:cover; flex:none;
+    border:2px solid #fff; box-shadow:0 6px 16px -6px rgba(17,17,17,.25);
+  }
+  .press-quote{ font-size:.98rem; color:var(--ink); margin:0 0 8px; font-style:italic; line-height:1.5; }
+  .press-byline{ font-size:.82rem; color:var(--ink-soft); margin:0; line-height:1.6; }
+  .press-byline strong{ color:var(--ink); font-weight:600; }
+  .press-byline a{ color:var(--orange-deep); font-weight:600; text-decoration:none; white-space:nowrap; }
+  .press-byline a:hover{ text-decoration:underline; }
+
   /* ============ INSTALACIONES ============ */
   .gallery-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
   .gallery-tile{
@@ -315,6 +330,7 @@
     .wrap{ padding:0 20px; }
     .section-pad{ padding:72px 0; }
     .hero-chip{ left:6%; }
+    .press-card{ flex-direction:column; text-align:center; padding:26px 22px; }
   }
 
   /* mobile menu */
@@ -424,26 +440,35 @@
 
   <!-- ============ NOSOTROS ============ -->
   <section class="section-pad" id="nosotros">
-    <div class="wrap about-grid">
-      <div class="about-copy reveal">
-        <p class="eyebrow">Sobre AMAX</p>
-        <h2 style="margin-bottom:20px;">Más que un gimnasio,<br><em>una comunidad.</em></h2>
-        <p class="lead">La actividad física es saludable, sí. Pero el entrenamiento va un paso más allá: tiene un objetivo, una planificación y una intención clara de ayudarte a evolucionar en el tiempo.</p>
-        <blockquote>
-          <p>En AMAX somos entrenadores, y estamos para guiar y acompañar tu proceso. Un lugar sin prejuicios, donde entendemos que la actividad física sana y que todos merecemos la oportunidad de disfrutarla.</p>
-          <p>No se trata solo de hacer ejercicio. Se trata de entrenar con sentido.</p>
-        </blockquote>
-        <ul class="checklist">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Entrenadores certificados, presentes en cada clase</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Planificación según tu objetivo, nivel y necesidades</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Un espacio sin prejuicios, para todos los niveles</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Seguimiento constante para resultados sostenibles</li>
-        </ul>
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p class="eyebrow">Sobre AMAX</p>
+          <h2 style="margin-bottom:20px;">Más que un gimnasio,<br><em>una comunidad.</em></h2>
+          <p class="lead">La actividad física es saludable, sí. Pero el entrenamiento va un paso más allá: tiene un objetivo, una planificación y una intención clara de ayudarte a evolucionar en el tiempo.</p>
+          <blockquote>
+            <p>En AMAX somos entrenadores, y estamos para guiar y acompañar tu proceso. Un lugar sin prejuicios, donde entendemos que la actividad física sana y que todos merecemos la oportunidad de disfrutarla.</p>
+            <p>No se trata solo de hacer ejercicio. Se trata de entrenar con sentido.</p>
+          </blockquote>
+          <ul class="checklist">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Entrenadores certificados, presentes en cada clase</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Planificación según tu objetivo, nivel y necesidades</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Un espacio sin prejuicios, para todos los niveles</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Seguimiento constante para resultados sostenibles</li>
+          </ul>
+        </div>
+        <div class="about-visual reveal">
+          <p class="eyebrow on-dark" style="margin:0;">A-Max no improvisa</p>
+          <p class="quote">No se trata solo de hacer ejercicio.<br>Se trata de <em>entrenar con sentido.</em></p>
+          <p class="sig">— Equipo AMAX</p>
+        </div>
       </div>
-      <div class="about-visual reveal">
-        <p class="eyebrow on-dark" style="margin:0;">A-Max no improvisa</p>
-        <p class="quote">No se trata solo de hacer ejercicio.<br>Se trata de <em>entrenar con sentido.</em></p>
-        <p class="sig">— Equipo AMAX</p>
+      <div class="press-card reveal">
+        <img src="assets/maximiliano-gonzalez.jpg" alt="Maximiliano González" class="press-avatar">
+        <div class="press-body">
+          <p class="press-quote">"No veamos el entrenamiento como una obligación, sino como una forma de disfrutar de nuestro cuerpo."</p>
+          <p class="press-byline"><strong>Maximiliano González</strong> · Preparador Físico del equipo AMAX, autor de la nota <em>"El músculo como método preventivo"</em> (Revista Sala de Espera) · <a href="assets/nota-el-musculo-como-metodo-preventivo.pdf" target="_blank" rel="noopener">Leer la nota completa →</a></p>
+        </div>
       </div>
     </div>
   </section>
