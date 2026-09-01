@@ -272,15 +272,6 @@
   .social-row a:hover{ border-color:var(--orange); color:var(--orange-deep); }
   .social-row svg{ width:17px; height:17px; }
 
-  form{ display:flex; flex-direction:column; gap:18px; }
-  input{
-    width:100%; background:var(--panel); border:1px solid var(--line); border-radius:8px;
-    padding:13px 14px; font-family:var(--font-body); font-size:.94rem; color:var(--ink); outline:none;
-    transition:border-color .2s ease;
-  }
-  input:focus{ border-color:var(--orange); }
-  .form-msg{ font-size:.85rem; font-family:var(--font-mono); color:var(--orange-deep); min-height:1.2em; }
-
   /* ============ FOOTER ============ */
   footer{ background:var(--orange-strong); color:var(--on-orange); padding:64px 0 26px; }
   .footer-grid{ display:grid; grid-template-columns:1.1fr .8fr .8fr 1fr; gap:40px; padding-bottom:40px; border-bottom:1px solid rgba(255,255,255,.22); }
@@ -296,11 +287,6 @@
     width:34px; height:34px; border-radius:50%; border:1px solid rgba(255,255,255,.35); display:flex; align-items:center; justify-content:center;
   }
   .footer-social svg{ width:15px; height:15px; }
-  .newsletter-form{ display:flex; gap:8px; margin-top:6px; flex-direction:row; }
-  .newsletter-form input{ background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.3); color:#fff; }
-  .newsletter-form input::placeholder{ color:rgba(255,246,236,.65); }
-  .newsletter-form button{ background:#fff; color:var(--orange-strong); border:0; border-radius:8px; padding:0 16px; cursor:pointer; flex:none; display:flex; align-items:center; justify-content:center; }
-  .newsletter-form button svg{ width:18px; height:18px; }
   .footer-bottom{ display:flex; justify-content:space-between; padding-top:22px; font-size:.78rem; opacity:.75; font-family:var(--font-mono); flex-wrap:wrap; gap:10px; }
 
   /* ============ REVEAL ============ */
@@ -708,13 +694,12 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Newsletter</h4>
-        <p style="margin-bottom:14px;">Recibí tips, promociones y novedades.</p>
-        <form class="newsletter-form" id="newsletterForm">
-          <input type="email" required placeholder="Tu correo electrónico" aria-label="Tu correo electrónico">
-          <button type="submit" aria-label="Suscribirme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-        </form>
-        <p class="form-msg" id="newsMsg" style="color:#fff; opacity:.85;"></p>
+        <h4>Horarios</h4>
+        <ul>
+          <li>Lunes a viernes</li>
+          <li>07:00 – 22:00 hs</li>
+          <li>Sábados y domingos: cerrado</li>
+        </ul>
       </div>
     </div>
     <div class="footer-bottom">
@@ -784,12 +769,6 @@
     revealEls.forEach(el => io.observe(el));
   }
 
-  // Fake newsletter submit (no backend in this demo)
-  document.getElementById('newsletterForm').addEventListener('submit', function(e){
-    e.preventDefault();
-    document.getElementById('newsMsg').textContent = '¡Listo! Ya estás suscripto.';
-    this.reset();
-  });
 </script>
 
 </body>
